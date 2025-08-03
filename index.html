@@ -9,5 +9,58 @@
 <body>
   <h1>Hello, world!</h1>
   <p>This is my first website coded from scratch.</p>
+
+<h2>Shop</h2>
+
+<div class="product">
+  <h3>Cool T-Shirt</h3>
+  <img src="tshirt.jpg" alt="Cool T-Shirt" width="200">
+  <p>$19.99</p>
+  <a href="product1.html">View Product</a>
+</div>
+
+<div class="product">
+  <h3>Awesome Mug</h3>
+  <img src="mug.jpg" alt="Awesome Mug" width="200">
+  <p>$9.99</p>
+  <a href="product2.html">View Product</a>
+</div>
+ 
+
+
+<!-- Contact Form -->
+<h2>Contact Me</h2>
+<form>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+  <button type="submit">Send</button>
+</form>
+
+ <!-- FAQ Section -->
+  <h2>FAQs</h2>
+
+  <div class="faq">
+    <button onclick="toggleAnswer('q1')">What is your return policy?</button>
+    <p id="q1" class="answer" style="display:none;">You can return any item within 30 days.</p>
+
+    <button onclick="toggleAnswer('q2')">Do you ship internationally?</button>
+    <p id="q2" class="answer" style="display:none;">Yes! We ship worldwide.</p>
+  </div>
+
+  <!-- JavaScript for FAQ -->
+  <script>
+    function toggleAnswer(id) {
+      const answer = document.getElementById(id);
+      answer.style.display = answer.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
 </body>
 </html>
