@@ -22,7 +22,7 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* or whatever spacing looks good */
+  gap: 0px; /* or whatever spacing looks good */
 }
 
 .product-card {
