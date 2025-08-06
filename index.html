@@ -7,40 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is my first website coded from scratch.</p>
+  <h1>Klalaa</h1>
+  <p>Specialists in Campers parts, and others.</p>
 
 <h2>Shop</h2>
 
-<div class="product">
-  <h3>Cool T-Shirt</h3>
-  <img src="tshirt.jpg" alt="Cool T-Shirt" width="200">
-  <p>$19.99</p>
-  <a href="product1.html">View Product</a>
-</div>
+<div class="shop-container">
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200" alt="Cool T-Shirt">
+    <h3>Cool T-Shirt</h3>
+    <p>$19.99</p>
+    <a href="product1.html" class="btn">View Product</a>
+  </div>
 
-<div class="product">
-  <h3>Awesome Mug</h3>
-  <img src="mug.jpg" alt="Awesome Mug" width="200">
-  <p>$9.99</p>
-  <a href="product2.html">View Product</a>
-</div>
- 
+  <div class="product-card">
+    <img src="https://via.placeholder.com/200" alt="Awesome Mug">
+    <h3>Awesome Mug</h3>
+    <p>$9.99</p>
+    <a href="product2.html" class="btn">View Product</a>
+  </div>
+
+  <!-- Add more products as needed -->
+</div> 
 
 
 <!-- Contact Form -->
-<h2>Contact Me</h2>
-<form>
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
+<h2>Contact Us</h2>
+<form action="https://formsubmit.co/yourname@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
   <button type="submit">Send</button>
+
 </form>
 
  <!-- FAQ Section -->
