@@ -97,4 +97,12 @@ input, textarea {
 
 <link rel="stylesheet" href="style.css" />
 
+#about {
+  background-color: #f9f9f9; /* or another background */
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
 
