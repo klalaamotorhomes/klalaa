@@ -3,12 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <title>Klalaa Camper Specialists</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Klalaa</h1>
-  <p>Specialists in Campers parts, and others.</p>
+  <p>Specialists in Caravan and Motorhome parts.</p>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="logo-container">
+    <img src="logo.png" alt="Logo" class="logo-image">
+    <span class="site-name">Klalaa</span>
+  </div>
+</header>
+
+<!-- Search Bar -->
+<input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()" />
 
 <!-- Shop Section -->
 <section id="shop">
@@ -70,7 +81,9 @@
 <!-- About Section -->
 <section id="about">
   <h2>About Us</h2>
-  <p>We’re a small business passionate about delivering quality products and outstanding service. Every item in our shop is selected with care, and we’re always here to help.</p>
+  <p>We're a camping-specialist business with over half a decade of experience with all-things campers. Having started off as a small business simply buying and selling fridges, Klalaa has now grown to support in multiple other specialties like fridges, ovens, water heaters, heaters and smaller parts for Campers.
+
+Every item in our shop is selected with care and consideration, and we're always here to help in case you require any help or support. This is exactly why we provide advice for any questions relating to Camper parts. Feel free to get in touch with any questions using our contact form above.</p>
 </section>
 
 
@@ -90,9 +103,8 @@
     <div style="flex: 1 1 200px; margin: 10px;">
       <h4>Follow Us</h4>
       <ul style="list-style: none; padding: 0;">
-        <li><a href="#" style="text-decoration: none; color: #333;">Instagram</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">Twitter</a></li>
-        <li><a href="#" style="text-decoration: none; color: #333;">Facebook</a></li>
+        <li><a href="#" style="text-decoration: none; color: #333;">eBay</a></li>
+ 
       </ul>
     </div>
 
@@ -104,9 +116,27 @@
   </div>
 
   <div style="text-align: center; padding-top: 20px; color: #777;">
-    &copy; 2025 Your Brand Name. All rights reserved.
+    &copy; 2025 Klalaa. All rights reserved.
   </div>
 </footer>
+
+<script>
+  function filterProducts() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toLowerCase();
+    const cards = document.querySelectorAll(".product-card");
+
+    cards.forEach(card => {
+      const title = card.querySelector("h3").textContent.toLowerCase();
+      if (title.includes(filter)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
 
 </body>
 </html>
